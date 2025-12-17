@@ -1,2 +1,10 @@
 link for data (): 
 https://drive.google.com/file/d/1J7PJCp5XGBhDvD5L94hkOkobt2kBOoA_/view?usp=sharing
+
+How to run the 'code museums github'
+  Put your image data folders inside a base directory like this:
+  base_folder/
+    ├─ aesthetic/
+    └─ unaesthetic/
+  Then run the script with: python your_script.py --data_dir /full/path/to/base_folder
+  Replace "/full/path/to/base_folder" with the actual path on your computer.
