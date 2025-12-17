@@ -1,16 +1,20 @@
-link for data (): 
+### Data access
+
+To reproduce the analysis, download the data archive from the following link and extract it into the project repository:
+
 https://drive.google.com/file/d/1J7PJCp5XGBhDvD5L94hkOkobt2kBOoA_/view?usp=sharing
 
-How to Run the aesthetic_analysis.py
-Step 1: Prepare your data folders
-  Make sure your images are organized like this on your computer:
-  base_folder/
-  ├─ aesthetic/
-  └─ unaesthetic/
-Step 2: Open your Terminal (Command Prompt)
-  - **Windows:** Click Start, type `cmd`, and open **Command Prompt**.
-  - **Mac:** Press `Cmd + Space`, type `Terminal`, and open it.
-  - **Linux:** Open your terminal application.
-Step 3: Run the script with your data folder path
-  Open the terminal and type this command exactly: python aesthetic_analysis.py --data_dir /full/path/to/base_folder
-  Replace /full/path/to/base_folder with the actual location of your data folder on your computer.
+After extraction, the data directory should contain two subfolders: `aesthetic/` and `unaesthetic/`.
+
+---
+
+### Running `aesthetic_analysis.py`
+
+**Step 1: Prepare the data directory**
+
+Ensure that the extracted data folder is named `data` and contains the two subfolders `aesthetic/` and `unaesthetic/`.
+
+**Step 2: Run the analysis**
+
+```bash
+python aesthetic_analysis.py --data_dir data
