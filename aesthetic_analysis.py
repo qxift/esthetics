@@ -13,8 +13,16 @@ from sklearn.preprocessing import StandardScaler
 from scipy.stats import pearsonr
 
 # ===================== CONFIG  =====================
-AESTH_DIR = "../Data/museums/aesthetic"      
-UNA_DIR   = "../Data/museums/unaesthetic"    
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--data_dir', type=str, required=True,
+                    help='Path to the base data folder containing "aesthetic" and "unaesthetic" subfolders')
+args = parser.parse_args()
+
+AESTH_DIR = os.path.join(args.data_dir, "aesthetic")
+UNA_DIR = os.path.join(args.data_dir, "unaesthetic")
+
 OUT_DIR   = "../code/plots/museums_dino_clip_binary_strict"
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -362,3 +370,4 @@ summary = {
 }
 pd.DataFrame([summary]).to_csv(os.path.join(OUT_DIR, "alignment_summary_strict.csv"), index=False)
 print("ALL DONE. Outputs in:", OUT_DIR)
+
